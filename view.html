@@ -1,0 +1,14 @@
+<script>
+var ws = new WebSocket('ws://10.99.1.29:9003');
+ws.onopen = function(){
+   var arr = {};
+   arr['adminId'] = 12;
+   var msg = JSON.stringify(arr);
+   ws.send(msg);
+};
+
+ws.onmessage = function(e){
+alert(e.data);
+
+};
+</script>
